@@ -34,6 +34,12 @@
   background-color: blue;
 }
 
+#left #full {
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 13vw;
+}
+
 /* Parte destra  */
 
 #right {
@@ -41,13 +47,58 @@
   float: left;
   width: 85vw;
   z-index: 10;
-  background-color: black;
+  background-color: yellow;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  margin-right: 70px;
+  font-size: 20px;
+  padding-top: 20px;
 }
 
 /* Mi occupo della parte inferiore  */
 
-#inf {
-  height: 10vh;
+footer {
+  height: 300px;
   width: 100vw;
+  top: 90vh;
   background-color: pink;
+  position: fixed;
+}
+
+/* Impostazioni generali  */
+
+@media all and (min-width: 781px) {
+  #left #logo {
+    display: none;
+  }
+
+}
+
+
+
+/* Impostazioni per i dispositivi più piccoli  */
+
+@media all and (max-width: 780px) {
+
+  #left #full {
+    display: none;
+  }
+
+  #left #logo {
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 13vw;
+    display: block;
+  }
+
+  #right li {
+    font-size: 15px;
+    padding-right: 10px;
+  }
 }
