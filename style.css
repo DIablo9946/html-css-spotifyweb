@@ -5,16 +5,16 @@
   }
 
 #container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: yellow;
 }
 
 /* Mi occupo della parte superiore */
 
 #sup {
-  height: 90vh;
-  width: 100vw;
+  /* height: 900px; */
+  width: 100%;
   background-color: red;
 }
 
@@ -27,17 +27,29 @@
 /* Parte sinistra  */
 
 #left {
-  height: 100%;
+  height: 1400px;
   float: left;
-  width: 15vw;
+  width: 250px;
   z-index: 10;
   background-color: blue;
+  /* display: flex; */
 }
 
 #left #full {
   padding-left: 10px;
   padding-top: 10px;
-  width: 13vw;
+  width: 90%;
+}
+
+#left ul {
+  padding-left: 20px;
+}
+
+.botleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
 }
 
 /* Parte destra  */
@@ -45,7 +57,7 @@
 #right {
   height: 100%;
   float: left;
-  width: 85vw;
+  width: calc(100% - 250px);
   z-index: 10;
   background-color: yellow;
 }
@@ -54,21 +66,50 @@ ul {
   list-style-type: none;
 }
 
-li {
+#right img {
+  width: 230px;
+  height: 200px;
   display: inline-block;
-  margin-right: 70px;
-  font-size: 20px;
-  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.ron {
+  border-radius: 50%;
+}
+
+.imgflex, .secimg {
+  display: flex;
+  flex-direction: row;
+  display: inline-block;
+}
+
+.secimg {
+  width: 250px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+}
+
+.last {
+  padding-bottom: 150px;
 }
 
 /* Mi occupo della parte inferiore  */
 
 footer {
-  height: 300px;
-  width: 100vw;
-  top: 90vh;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
   background-color: pink;
   position: fixed;
+}
+
+footer img {
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 /* Impostazioni generali  */
@@ -76,6 +117,13 @@ footer {
 @media all and (min-width: 781px) {
   #left #logo {
     display: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 70px;
+    font-size: 20px;
+    padding-top: 20px;
   }
 
 }
@@ -97,8 +145,10 @@ footer {
     display: block;
   }
 
-  #right li {
+   li {
     font-size: 15px;
     padding-right: 10px;
+    display: inline-block;
+    padding-top: 20px;
   }
 }
